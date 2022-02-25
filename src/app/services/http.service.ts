@@ -14,5 +14,4 @@ export class HttpService<T> {
   GetListarTodos(caminho: string) {
     return this.http.get<ProdutosModel>(`${environment.apiUrl}${caminho}`).pipe(take(1));
   }
-
 }
