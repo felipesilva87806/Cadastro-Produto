@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: "http://clube.clienteconfianca.com.br/exemploaplicacaoapi/"
 };
