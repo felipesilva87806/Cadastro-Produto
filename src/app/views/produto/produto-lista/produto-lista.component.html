@@ -1,0 +1,13 @@
+<div>
+  <!-- <app-pesquisa [form]="form" (Pesquisar)="OnSubmit()"></app-pesquisa> -->
+
+  <div class="list-group mb-1" *ngFor="let item of lista">
+    <app-card [Codigo]="item.Codigo" [DescricaoProduto]="item.Descricao">
+      <button type="button" class="btn btn-sm btn-link float-end">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </app-card>    
+  </div>
+
+  <!-- <app-paginacao [Pagina]="pagina" [Quantidade]="quantidade" (AlterarPagina)="AlterarPagina($event)"></app-paginacao> -->
+</div>
