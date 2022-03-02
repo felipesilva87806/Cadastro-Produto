@@ -1,13 +1,11 @@
 <div class="list-group-item list-group-item-action flex-column align-items-start mb-1 shadow">
     <div class="d-flex w-100 justify-content-between">
         <h6 class="mb-1">
-            <a [routerLink]="[Codigo]" *ngIf="!OcultarLink">
-                {{DescricaoProduto }}
-            </a>
-            <span *ngIf="OcultarLink">
-                {{DescricaoProduto }}
-            </span>            
-        </h6>
+            <p class="mb-1">{{ Codigo }}</p>
+            <a class="mb-1" [routerLink]="[Codigo]" *ngIf="!OcultarLink">
+                {{ DescricaoProduto }}
+            </a>            
+        </h6>            
         <small class="text-muted">
             <ng-content></ng-content>
         </small>
