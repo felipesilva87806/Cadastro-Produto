@@ -15,5 +15,9 @@ export class ProdutoService {
     .pipe(map(x => {
       return x;
     }));
-  }  
+  }
+  
+  Inserir(objeto: ProdutosModel) {
+    return this.httpService.Post("Produto", objeto);
+  }
 }

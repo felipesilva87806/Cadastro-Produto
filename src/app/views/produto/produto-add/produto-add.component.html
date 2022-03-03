@@ -2,22 +2,24 @@
     <div class="form-group mb-2">
         <div class="col-sm-12">
             <label for="Codigo" class="control-label">Código</label>
-            <input type="number" [ngClass]="AplicaCssErro('Codigo')" class="form-control" placeholder="Codigo do produto" id="Codigo"
-                formControlName="Codigo">
+            <input type="number" [ngClass]="AplicaCssErro('Codigo')" class="form-control"
+                placeholder="Codigo do produto" id="Codigo" formControlName="Codigo">
         </div>
     </div>
     <div class="form-group mb-2">
         <div class="col-sm-12">
             <label for="Descricao" class="control-label">Descrição</label>
-            <input type="text" [ngClass]="AplicaCssErro('Descricao')" class="form-control" placeholder="Descricao do produto" id="Descricao"
-                formControlName="Descricao">
+            <input type="text" [ngClass]="AplicaCssErro('Descricao')" class="form-control"
+                placeholder="Descricao do produto" id="Descricao" formControlName="Descricao">
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <button *ngIf="!bloquearPedido" type="submit" class="btn btn-success me-1">
+            <!-- Aqui ele valida se o formulario é valido ou não -->
+            <button [disabled]="!formulario.valid" type="submit"
+                class="btn btn-success me-1" (click)="Salvar()">
                 <i class="far fa-save"></i>
-                Submit
+                Salvar
             </button>
             <button type="button" class="btn btn-danger" (click)="Resetar()">
                 <i class="far fa-window-close"></i>
